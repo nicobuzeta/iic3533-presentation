@@ -6,7 +6,7 @@
 
 #define SIZE 1000 // Size of the lattice
 #define TEMP 2.0 // Temperature
-#define STEPS 1000000000 // Number of Monte Carlo steps
+#define STEPS 100000000 // Number of Monte Carlo steps
 
 int lattice[SIZE][SIZE];
 

@@ -9,7 +9,6 @@
 // Define the function to integrate
 double f(double x) {
     return sin(x);
-    // return exp(-x * x) * cos(x);
 }
 
 int main() {
