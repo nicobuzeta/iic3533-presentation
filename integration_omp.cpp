@@ -14,13 +14,14 @@ double f(double x) {
 int main() {
     long num_samples = 100000000; // Number of random samples
     double a = 0; // Lower bound of the interval
-    double b = M_PI; // Upper bound of the interval (integrating sin(x) from 0 to PI)
+    double b = M_PI; // Upper bound of the inverval
     double integral = 0.0;
     double sum = 0.0;
 
     #pragma omp parallel reduction(+:sum)
     {
         // Create a thread-local random number generator
+        // rand is not thread-safe
         std::mt19937 generator(omp_get_thread_num());
         std::uniform_real_distribution<double> distribution(a, b);
 
