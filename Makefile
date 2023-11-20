@@ -45,7 +45,7 @@ help:
 
 all: $(OBJS)
 
-ising_model: ising_model.c
+ising_model: ising_model.cpp
 	$(CC) $(if $(DEBUG),$(DEBUGFLAGS),$(OPTFLAGS)) $(CFLAGS) $(OMPFLAG) $^ $(LIBS) -o $@
 
 integration_omp: integration_omp.cpp
